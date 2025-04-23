@@ -66,7 +66,7 @@ const ForRenter = () => {
   };
 
   return (
-    <div className="bg-white bg-opacity-50 text-black px-6 py-10 max-w-6xl mx-auto mt-20 rounded-xl shadow-lg">
+    <div className="bg-white text-black px-6 py-10 max-w-6xl mx-auto mt-20 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Yêu cầu thuê đồ</h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="space-y-6">
