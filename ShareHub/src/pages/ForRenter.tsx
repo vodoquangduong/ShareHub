@@ -76,12 +76,12 @@ const ForRenter = () => {
             <input name="renterName" value={form.renterName} onChange={handleChange} className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Liên hệ</label>
+            <label className="block text-sm font-medium mb-1">Thông tin liên hệ <span className='text-red-500 italic'>(*)</span></label>
             <input name="contact" value={form.contact} onChange={handleChange} className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Địa chỉ</label>
-            <input name="location" value={form.location} onChange={handleChange} placeholder="Ví dụ: Hà Nội, TP.HCM..." className="w-full border border-black p-3 rounded-md bg-white" required />
+            <label className="block text-sm font-medium mb-1">Nơi thuê</label>
+            <input name="location" value={form.location} onChange={handleChange} placeholder="Tỉnh/Thành phố" className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
         </div>
 

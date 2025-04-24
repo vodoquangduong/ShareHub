@@ -30,12 +30,12 @@ const ForOwner = () => {
 
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
-  
+
   //   if (!form.ownerName || !form.product || !form.location || !form.contact || !form.startDate || !form.endDate) {
   //     alert("Vui lòng điền đầy đủ các trường bắt buộc");
   //     return;
   //   }
-  
+
   //   const formData = new FormData();
   //   formData.append("ownerName", form.ownerName);
   //   formData.append("contact", form.contact);
@@ -44,14 +44,14 @@ const ForOwner = () => {
   //   formData.append("time", `${form.startDate} - ${form.endDate}`);
   //   formData.append("price", form.price);
   //   formData.append("note", form.note);
-  
+
   //   try {
   //     await fetch("https://script.google.com/macros/s/AKfycbzjdt-TGC6pI3cXrZ-80ii2VkVtp5bwnTQELgYkIoitXUu-kHu0mQkCykcrXyTw-r-pFA/exec", {
   //       method: "POST",
   //       body: formData,
   //       mode: "no-cors", // BẮT BUỘC khi dùng FormData với Google Apps Script
   //     });
-  
+
   //     alert("Đã gửi thành công!");
   //     setForm({
   //       ownerName: '', product: '', customProduct: '', location: '',
@@ -64,15 +64,15 @@ const ForOwner = () => {
   // };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (!form.ownerName || !form.product || !form.location || !form.contact || !form.startDate || !form.endDate) {
       alert("Vui lòng điền đầy đủ các trường bắt buộc");
       return;
     }
-  
+
     const confirmSend = window.confirm("Bạn có chắc muốn gửi thông tin này?");
     if (!confirmSend) return;
-  
+
     const formData = new FormData();
     formData.append("sheetName", "Cho thuê");
     formData.append("ownerName", form.ownerName);
@@ -82,14 +82,14 @@ const ForOwner = () => {
     formData.append("time", `${form.startDate} - ${form.endDate}`);
     formData.append("price", form.price);
     formData.append("note", form.note);
-  
+
     try {
       await fetch("https://script.google.com/macros/s/AKfycbzjdt-TGC6pI3cXrZ-80ii2VkVtp5bwnTQELgYkIoitXUu-kHu0mQkCykcrXyTw-r-pFA/exec", {
         method: "POST",
         mode: "no-cors",
         body: formData
       });
-  
+
       alert("Đã gửi thành công!");
       setForm({
         ownerName: '', product: '', customProduct: '', location: '',
@@ -100,9 +100,9 @@ const ForOwner = () => {
       console.error("Submit error:", error);
     }
   };
-  
-  
-  
+
+
+
 
   return (
     <div className="bg-white text-black rounded-2xl shadow-lg p-8 w-full max-w-6xl mx-auto my-20">
@@ -115,12 +115,12 @@ const ForOwner = () => {
             <input name="ownerName" value={form.ownerName} onChange={handleChange} placeholder="Họ và tên" className="w-full border border-black p-2 rounded-md bg-white" required />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Liên hệ</label>
+            <label className="block text-sm font-medium mb-1">Thông tin liên hệ <span className='text-red-500 italic'>(*)</span></label>
             <input name="contact" value={form.contact} onChange={handleChange} placeholder="Email, SĐT, Zalo..." className="w-full border border-black p-2 rounded-md bg-white" required />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Địa chỉ</label>
-            <input name="location" value={form.location} onChange={handleChange} placeholder="Ví dụ: Hà Nội, TP.HCM..." className="w-full border border-black p-2 rounded-md bg-white" required />
+            <label className="block text-sm font-medium mb-1">Nơi cho thuê</label>
+            <input name="location" value={form.location} onChange={handleChange} placeholder="Tỉnh/Thành phố" className="w-full border border-black p-2 rounded-md bg-white" required />
           </div>
         </div>
 
