@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-white text-center p-6 border-t text-sm text-gray-500 w-full">
-      © {new Date().getFullYear()} ShareHub. All rights reserved.
+      © {new Date().getFullYear()} Travelity. All rights reserved.
     </footer>
   );
 };
