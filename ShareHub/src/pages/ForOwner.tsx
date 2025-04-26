@@ -65,7 +65,7 @@ const ForOwner = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!form.ownerName || !form.product || !form.location || !form.contact || !form.startDate || !form.endDate) {
+    if (!form.contact) {
       alert("Vui lòng điền đầy đủ các trường bắt buộc");
       return;
     }
@@ -122,6 +122,10 @@ const ForOwner = () => {
             <label className="block text-sm font-medium mb-1">Nơi cho thuê</label>
             <input name="location" value={form.location} onChange={handleChange} placeholder="Tỉnh/Thành phố" className="w-full border border-black p-2 rounded-md bg-white" required />
           </div>
+          <div>
+            <label className="block text-sm font-medium mb-1 underline"><span className='text-red-500 italic'>(*)</span> Điều khoản và bảo mật</label>
+            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin của bạn để khi tìm được người cho thuê sẽ liên hệ và thông báo, kết nối bạn để thuê được món đồ phù hợp.</label>
+            </div>
         </div>
 
         <div className="space-y-6">

@@ -36,7 +36,7 @@ const ForRenter = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.renterName || !form.contact || !form.location || !form.product || !form.rentStart || !form.rentEnd) {
+    if (!form.contact) {
       alert("Vui lòng điền đầy đủ thông tin");
       return;
     }
@@ -73,16 +73,20 @@ const ForRenter = () => {
           <h3 className="text-xl font-semibold border-b pb-2">Thông tin người thuê</h3>
           <div>
             <label className="block text-sm font-medium mb-1">Tên bạn</label>
-            <input name="renterName" value={form.renterName} onChange={handleChange} className="w-full border border-black p-3 rounded-md bg-white" required />
+            <input name="renterName" value={form.renterName} onChange={handleChange} placeholder="Họ và tên"  className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Thông tin liên hệ <span className='text-red-500 italic'>(*)</span></label>
-            <input name="contact" value={form.contact} onChange={handleChange} className="w-full border border-black p-3 rounded-md bg-white" required />
+            <input name="contact" value={form.contact} onChange={handleChange}  placeholder="Email, SĐT, Zalo..." className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Nơi thuê</label>
             <input name="location" value={form.location} onChange={handleChange} placeholder="Tỉnh/Thành phố" className="w-full border border-black p-3 rounded-md bg-white" required />
           </div>
+          <div>
+            <label className="block text-sm font-medium mb-1 underline"><span className='text-red-500 italic'>(*)</span> Điều khoản và bảo mật</label>
+            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin của bạn để khi tìm được người thuê sẽ liên hệ và thông báo, kết nối bạn với những người có nhu cầu thuê sản phẩm của bạn.</label>
+            </div>
         </div>
 
         <div className="space-y-6">
