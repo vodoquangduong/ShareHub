@@ -39,7 +39,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="bg-white text-black px-6 py-10 max-w-3xl mx-auto mt-20 rounded-xl shadow-lg">
+    <div className="bg-white/80 text-black px-6 py-10 max-w-3xl mx-auto mt-20 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Góp ý & Phản hồi</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -51,7 +51,7 @@ const Feedback = () => {
           <textarea name="message" value={form.message} onChange={handleChange} rows={4} className="w-full border border-black p-3 rounded-md bg-white" placeholder="Góp ý của bạn về dịch vụ hoặc trải nghiệm..." required></textarea>
         </div>
         <div className="col-span-1 md:col-span-2 text-white">
-          <button type="submit" className="w-full bg-black py-3 px-6 rounded-md hover:bg-gray-800 transition">Gửi thông tin</button>
+          <button type="submit" className="w-full  py-3 px-6 rounded-md bg-blue-600 hover:bg-blue-700 transition">Gửi thông tin</button>
         </div>
       </form>
     </div>

@@ -4,17 +4,21 @@ import ForRenter from './pages/ForRenter';
 import ForOwner from './pages/ForOwner';
 import Feedback from './pages/Feedback.tsx';
 import LandingPage from './pages/Landingpage.tsx';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<LandingPage />} />
-        <Route path="nguoi-thue" element={<ForRenter />} />
-        <Route path="nguoi-cho-thue" element={<ForOwner />} />
-        <Route path="gop-y" element={<Feedback />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="nguoi-thue" element={<ForRenter />} />
+          <Route path="nguoi-cho-thue" element={<ForOwner />} />
+          <Route path="gop-y" element={<Feedback />} />
+        </Route>
+      </Routes>
+      <Analytics />
+    </>
   );
 }
 export default App;

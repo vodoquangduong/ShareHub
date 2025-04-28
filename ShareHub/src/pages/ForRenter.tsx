@@ -66,8 +66,14 @@ const ForRenter = () => {
   };
 
   return (
-    <div className="bg-white text-black px-6 py-10 max-w-6xl mx-auto mt-20 rounded-xl shadow-lg">
+    <div className="bg-white/95 text-black px-6 py-10 max-w-6xl mx-auto mt-20 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Yêu cầu thuê đồ</h2>
+      <p className="text-xl text-center text-gray-700 max-w-4xl mx-auto">
+      Bạn có bao giờ cảm thấy thiếu thiếu món đồ gì đó khi đi du lịch? Mà mua thì chỉ dùng ít lần.
+      <div>
+      Đừng để chuyến du lịch của bạn bị ảnh hưởng bởi những bất tiện nhỏ này. Điền những thông tin dưới đây và Travelity sẽ tìm món đồ đó cho bạn ngay!
+      </div>
+      </p>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="space-y-6">
           <h3 className="text-xl font-semibold border-b pb-2">Thông tin người thuê</h3>
@@ -85,7 +91,7 @@ const ForRenter = () => {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1 underline"><span className='text-red-500 italic'>(*)</span> Điều khoản và bảo mật</label>
-            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin của bạn để khi tìm được người thuê sẽ liên hệ và thông báo, kết nối bạn với những người có nhu cầu thuê sản phẩm của bạn.</label>
+            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin để thông báo và kết nối bạn với người đang có sản phẩm bạn cần thuê, ở nơi bạn muốn thuê!</label>
             </div>
         </div>
 
@@ -119,7 +125,7 @@ const ForRenter = () => {
         </div>
 
         <div className="col-span-1 md:col-span-2 text-white">
-          <button type="submit" className="w-full bg-black py-3 px-6 rounded-md hover:bg-gray-800 transition">Gửi thông tin</button>
+          <button type="submit" className="w-full py-3 px-6 rounded-md bg-blue-600 hover:bg-blue-700 transition">Gửi thông tin</button>
         </div>
       </form>
     </div>

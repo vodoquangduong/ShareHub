@@ -1,24 +1,28 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
 const MainLayout = () => {
+  const location = useLocation();
+
+  const isHome = location.pathname === '/';
+  const backgroundImage = isHome ? '/new_bg.jpg' : '/new_bg_2.webp';
+
   return (
     <div
-    className="flex flex-col min-h-screen w-screen"
-    style={{
-      backgroundImage: 'url("/bg2.jpg")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}
-  >
-    <Header />
-    <main className="flex-1 pt-24 px-4 md:px-8 w-full max-w-screen-xl mx-auto  bg-opacity-50 rounded-xl">
-      <Outlet />
-    </main>
-    <Footer />
-  </div>
-  
+      className="flex flex-col min-h-screen w-screen"
+      style={{
+        backgroundImage: `url("${backgroundImage}")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <Header />
+      <main className="flex-1 pt-24 px-4 md:px-8 w-full max-w-screen-xl mx-auto bg-white/0 bg-opacity-70 rounded-xl">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

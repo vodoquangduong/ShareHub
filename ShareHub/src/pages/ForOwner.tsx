@@ -105,8 +105,14 @@ const ForOwner = () => {
 
 
   return (
-    <div className="bg-white text-black rounded-2xl shadow-lg p-8 w-full max-w-6xl mx-auto my-20">
+    <div className="bg-white/95 text-black rounded-2xl shadow-lg p-8 w-full max-w-6xl mx-auto my-20">
       <h2 className="text-3xl font-bold text-center mb-8">Đăng thông tin cho thuê</h2>
+      <p className="text-xl text-center text-gray-700 max-w-4xl mx-auto">
+      Bạn có đang sở hữu những món đồ mà chỉ nằm ở đó thôi không được sử dụng không? Travelity giúp bạn có thêm chút thu nhập từ những món đồ đó. 
+      <div>
+      Điền những thông tin dưới đây và chúng tôi sẽ tìm người cần thuê cho bạn ngay! 
+      </div>
+      </p>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="space-y-6">
           <h3 className="text-xl font-semibold border-b pb-2">Thông tin người cho thuê</h3>
@@ -124,7 +130,7 @@ const ForOwner = () => {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1 underline"><span className='text-red-500 italic'>(*)</span> Điều khoản và bảo mật</label>
-            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin của bạn để khi tìm được người cho thuê sẽ liên hệ và thông báo, kết nối bạn để thuê được món đồ phù hợp.</label>
+            <label className="block text-sm font-medium mb-1 italic"> Chúng tôi thu thập thông tin để thông báo và kết nối bạn với người đang có nhu cầu thuê sản phẩm bạn có, ở nơi bạn muốn cho thuê!</label>
             </div>
         </div>
 
@@ -173,7 +179,7 @@ const ForOwner = () => {
         </div>
 
         <div className="col-span-1 md:col-span-2 text-white">
-          <button type="submit" className="w-full bg-black py-3 px-6 rounded-md hover:bg-gray-800 transition">Gửi thông tin</button>
+          <button type="submit" className="w-full  py-3 px-6 rounded-md bg-blue-600 hover:bg-blue-700 transition">Gửi thông tin</button>
         </div>
       </form>
     </div>
