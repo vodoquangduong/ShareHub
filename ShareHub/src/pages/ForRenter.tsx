@@ -66,8 +66,8 @@ const ForRenter = () => {
   };
 
   return (
-    <div className="bg-white/95 text-black px-6 py-10 max-w-6xl mx-auto mt-20 rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold mb-6 text-center">Yêu cầu thuê đồ</h2>
+    <div className="bg-white/95 text-black px-6 py-10 max-w-6xl mx-auto mt-10 rounded-xl shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-center pt-10">Yêu cầu thuê đồ</h2>
       <p className="text-xl text-center text-gray-700 max-w-4xl mx-auto">
       Bạn có bao giờ cảm thấy thiếu thiếu món đồ gì đó khi đi du lịch? Mà mua thì chỉ dùng ít lần.
       <div>

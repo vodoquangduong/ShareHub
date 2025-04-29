@@ -105,8 +105,8 @@ const ForOwner = () => {
 
 
   return (
-    <div className="bg-white/95 text-black rounded-2xl shadow-lg p-8 w-full max-w-6xl mx-auto my-20">
-      <h2 className="text-3xl font-bold text-center mb-8">Đăng thông tin cho thuê</h2>
+    <div className="bg-white/95 text-black rounded-2xl shadow-lg p-8 w-full max-w-6xl mt-10 mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-8 pt-10">Đăng thông tin cho thuê</h2>
       <p className="text-xl text-center text-gray-700 max-w-4xl mx-auto">
       Bạn có đang sở hữu những món đồ mà chỉ nằm ở đó thôi không được sử dụng không? Travelity giúp bạn có thêm chút thu nhập từ những món đồ đó. 
       <div>
